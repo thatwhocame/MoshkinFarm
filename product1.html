@@ -111,14 +111,13 @@
             <div>
               <h1 id="price">100</h1><span>руб.</span>
             </div>
-            <script>
+            <script type="text/javascript">
+                var p1 = 100;
+                var p2 = 200;
+                var p3 = 300;
+                var p4 = 500;
               function PriceSetting(p,n){
-                col.value = 1;
-                setPrice(p,n);
-              }
-              function setPrice(p, n){
-                document.getElementById('price').textContent=p*n;
-                switch(p/n){
+                switch(p){
                   case p1:
                     var txt = p1;
                     break;
@@ -132,6 +131,11 @@
                     var txt = p4;
                     break;
                 }
+                col.value = 1;
+                setPrice(txt,n);
+              }
+              function setPrice(p, n){
+                document.getElementById('price').textContent=p*n;
               }
             </script>
             <div id="raz" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -154,10 +158,6 @@
                 <button type="button" class="btn btn-outline-dark plus" id="plus">+</button>
               </div>
               <script type="text/javascript">
-                var p1 = 100;
-                var p2 = 200;
-                var p3 = 300;
-                var p4 = 500;
                 let col = document.getElementById('col');
                 let plus = document.getElementById('plus');
                 let minus = document.getElementById('minus');

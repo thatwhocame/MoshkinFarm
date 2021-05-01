@@ -135,7 +135,21 @@
                 setPrice(txt,n);
               }
               function setPrice(p, n){
-                document.getElementById('price').textContent=p*n;
+                switch(p){
+                  case p1:
+                    var txt = p1;
+                    break;
+                  case p2:
+                    var txt = p2;
+                    break;
+                  case p3:
+                    var txt = p3;
+                    break;
+                  case p4:
+                    var txt = p4;
+                    break;
+                }
+                document.getElementById('price').textContent=txt*n;
               }
             </script>
             <div id="raz" class="btn-group btn-group-toggle" data-toggle="buttons">

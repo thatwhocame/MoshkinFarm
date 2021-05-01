@@ -112,6 +112,10 @@
               <h1 id="price">100</h1><span>руб.</span>
             </div>
             <script>
+              function PriceSetting(p,n){
+                col.value = 1;
+                setPrice(p,n);
+              }
               function setPrice(p, n){
                 document.getElementById('price').textContent=p*n;
                 switch(p/n){
@@ -131,16 +135,16 @@
               }
             </script>
             <div id="raz" class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label onclick="setPrice(p1,1)" class="btn btn-dark">
+              <label onclick="PriceSetting(p1,1)" class="btn btn-dark">
                 <input value="100" role="checkbox" type="radio" name="options1" id="option1" autocomplete="off" checked> 10шт.
               </label>
-              <label onclick="setPrice(p2,1)" class="btn btn-dark">
+              <label onclick="PriceSetting(p2,1)" class="btn btn-dark">
                 <input value="200" role="checkbox" type="radio" name="options2" id="option2" autocomplete="off"> 20шт.
               </label>
-              <label onclick="setPrice(p3,1)" class="btn btn-dark">
+              <label onclick="PriceSetting(p3,1)" class="btn btn-dark">
                 <input value="300" role="checkbox" type="radio" name="options3" id="option3" autocomplete="off"> 30шт.
               </label>
-              <label onclick="setPrice(p4,1)" class="btn btn-dark">
+              <label onclick="PriceSetting(p4,1)" class="btn btn-dark">
                 <input value="500" role="checkbox" type="radio" name="options4" id="option4" autocomplete="off"> 50шт.
               </label>
             </div>
